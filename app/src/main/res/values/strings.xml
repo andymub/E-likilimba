@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">E-likilimba</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Mot de passe</string>
+    <string name="login_password_hint2">Répéter le mot de passe </string>
+</resources>
