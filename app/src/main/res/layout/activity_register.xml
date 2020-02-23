@@ -61,7 +61,7 @@
                         <EditText
                             android:id="@+id/editTextName"
                             style="@style/modifiedEditText"
-                            android:hint="Nom"
+                            android:hint="Nom et prénom"
                             android:inputType="textPersonName"
                             android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -101,7 +101,7 @@
                         android:textColorHint="#7C4DFF">
 
                         <EditText
-                            android:id="@+id/editTextPassword"
+                            android:id="@+id/editTextLoginPassword"
                             style="@style/modifiedEditText"
                             android:hint="@string/login_password_hint"
                             android:inputType="textPassword"
@@ -196,18 +196,94 @@
                             android:maxLines="1" />
 
                     </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/viewParent.normal"
+
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:foregroundGravity="center"
+                        android:gravity="center_horizontal"
+                        android:text=" Inserer la photo de votre carte d'identité"
+                        android:textColor="@color/black" />
+
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputCarteIdPhoto"
                         style="@style/parent"
                         android:layout_marginTop="@dimen/loginViewsMargin"
                         android:textColorHint="#7C4DFF">
 
-                        <TextView
-                            android:id="@+id/editTextCarteIdPhoto"
-                            style="@style/modifiedEditText"
-                            android:hint="Photo de votre carte d'Identité valide"
-                            android:inputType="text"
-                            android:maxLines="1" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp" >
+                            <Button
+                                style="@style/loginButton"
+                                android:id="@+id/btnSelectPhotoID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Photo Carte" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+                            <ImageView
+                                android:id="@+id/viewImageID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_id_photo" />
+                        </LinearLayout>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/viewParent.normal"
+
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:foregroundGravity="center"
+                        android:gravity="center_horizontal"
+                        android:text=" Inserer la photo de profil"
+                        android:textColor="@color/black" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputPhoto"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:textColorHint="#7C4DFF">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp" >
+                            <Button
+                                style="@style/loginButton"
+                                android:id="@+id/btnSelectPhotoProfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Photo Carte" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+                            <ImageView
+                                android:id="@+id/viewImageProfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_profil" />
+                        </LinearLayout>
 
                     </com.google.android.material.textfield.TextInputLayout>
 

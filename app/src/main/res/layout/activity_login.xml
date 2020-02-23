@@ -69,7 +69,7 @@ android:layout_gravity="center">
                 android:textColorHint="#7C4DFF">
 
                 <EditText
-                    android:id="@+id/editTextPassword"
+                    android:id="@+id/editTextLoginPassword"
                     style="@style/modifiedEditText"
                     android:hint="@string/login_password_hint"
                     android:inputType="textPassword"
@@ -84,18 +84,15 @@ android:layout_gravity="center">
                 android:layout_marginTop="10dp"
                 android:text="Mot de passe oublié?"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/newsMoreTextSize" />x
+                android:textSize="@dimen/newsMoreTextSize" />
 
-            <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
-                android:id="@+id/cirLoginButton"
+            <Button
+                android:id="@+id/btnLoginButton"
                 style="@style/loginButton"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:text="S'identifier"
-                app:initialCornerAngle="27dp"
-                app:spinning_bar_color="#FFF"
-                app:spinning_bar_padding="6dp"
-                app:spinning_bar_width="4dp" />
+                />
 
             <TextView
                 style="@style/parent"

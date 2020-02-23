@@ -27,6 +27,11 @@
         <item name="android:textSize">@dimen/headerTextSize</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="viewParent.normal">
+        <item name="android:textColor">@color/contentTextColor</item>
+        <item name="android:textSize">@dimen/header1TextSize</item>
+        <item name="android:textStyle">normal</item>
+    </style>
 
     <style name="viewParent.headerText.NoMode">
         <item name="android:textColor">@color/darkTextColor</item>
