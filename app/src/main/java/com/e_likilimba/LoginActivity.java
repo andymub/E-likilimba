@@ -33,26 +33,29 @@ public class LoginActivity  extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
-                if(edtEmailId.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(),"enter email address",Toast.LENGTH_SHORT).show();
 
-                }else if (!(edtEmailId.getText().toString().trim().matches(emailPattern))) {
-                        Toast.makeText(getApplicationContext(),"Invalide email",Toast.LENGTH_SHORT).show();
-
-                }
-                else if (edtPassword.getText().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(),"entrer un mot de passe",Toast.LENGTH_SHORT).show();
-
-                }
-                else if (edtPassword.getText().length()<6)
-                {
-                    Toast.makeText(getApplicationContext(),"mot de passe 8 digit min",Toast.LENGTH_SHORT).show();
-
-                }
-                else{
-                    startBoardActivity();
-
-                }
+                //todo de-commenter cette partie 'validateur du login
+//                if(edtEmailId.getText().toString().isEmpty()) {
+//                    Toast.makeText(getApplicationContext(),"enter email address",Toast.LENGTH_SHORT).show();
+//
+//                }else if (!(edtEmailId.getText().toString().trim().matches(emailPattern))) {
+//                        Toast.makeText(getApplicationContext(),"Invalide email",Toast.LENGTH_SHORT).show();
+//
+//                }
+//                else if (edtPassword.getText().toString().isEmpty()){
+//                    Toast.makeText(getApplicationContext(),"entrer un mot de passe",Toast.LENGTH_SHORT).show();
+//
+//                }
+//                else if (edtPassword.getText().length()<6)
+//                {
+//                    Toast.makeText(getApplicationContext(),"mot de passe 8 digit min",Toast.LENGTH_SHORT).show();
+//
+//                }
+//                else{
+//                    startBoardActivity();
+//
+//                }
+                startBoardActivity();
             }
         });
     }

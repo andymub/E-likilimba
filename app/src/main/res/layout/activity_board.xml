@@ -26,9 +26,8 @@
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             app:itemIconTint="@color/bleu"
-            app:itemTextColor="@color/yellowColor"
-            app:menu="@menu/bottom_navigation_menu"
-            />
+            app:itemTextColor="@color/intro_title_color"
+            app:menu="@menu/bottom_navigation_menu" />
     </FrameLayout>
 
 </RelativeLayout>

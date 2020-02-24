@@ -1,15 +1,19 @@
 package com.e_likilimba;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.e_likilimba.Adapter.CardAdapter;
 import com.e_likilimba.Objet.CardData;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,12 +25,15 @@ public class BoardActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CardAdapter cardAdapter;
     private List cardDataList = new ArrayList<>();
+    BottomNavigationView bottomNavigation;
 
     @TargetApi(Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
+        bottomNavigation=findViewById(R.id.bottom_navigation);
+        bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         recyclerView = findViewById(R.id.recycler_view);
         cardAdapter = new CardAdapter(cardDataList,BoardActivity.this);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
@@ -43,4 +50,29 @@ public class BoardActivity extends AppCompatActivity {
         cardDataList.add(cardData);
 
     }
+
+    BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.navigation_transfert:
+
+                            Intent intentTranfert =new Intent(BoardActivity.this, TransfertActivity.class);
+                            startActivity(intentTranfert);
+                            return true;
+                        case R.id.navigation_retrait:
+
+                            return true;
+                        case R.id.navigation_depot:
+
+                            return true;
+                        case R.id.navigation_notifications:
+
+                            return true;
+
+                    }
+                    return false;
+                }
+            };
+
 }
