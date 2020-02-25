@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/intro_description_color"
+    android:background="@drawable/surface_gray_dark_light_shadow_18440_800x1200"
     tools:context=".TransfertActivity">
 
     <LinearLayout
@@ -35,8 +35,55 @@
     <View
         android:id="@+id/viewLine"
         android:layout_width="wrap_content"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_below="@+id/linearTransfOne"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txtTypedeTransfert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewLine"
+        android:layout_marginLeft="5dp"
+        android:text="Type transfert"
+        android:textColor="@color/CTA_text" />
+
+    <LinearLayout
+        android:id="@+id/typedetransfert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTypedeTransfert"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/roundedbutton"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conversion  des dévises" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Envoie d'argent" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@+id/typedetransfert"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@android:color/black" />
@@ -44,7 +91,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/viewLine"
+        android:layout_below="@+id/viewLine2"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
         android:gravity="center|top"
@@ -118,7 +165,7 @@
             android:layout_marginRight="10dp"
             android:gravity="end"
             android:text="Compte de Mr xxxxx"
-            android:textColor="#7C4DFF" />
+            android:textColor="#40C4FF" />
 
         <TextView
             android:id="@+id/textView9"
@@ -150,7 +197,7 @@
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="Coût de transfert : 0.4$"
-                android:textColor="#7C4DFF" />
+                android:textColor="#40C4FF" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -160,7 +207,7 @@
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="Coût Total : ...$"
-                android:textColor="#EB1B55" />
+                android:textColor="#E77E9C" />
         </LinearLayout>
 
         <TextView

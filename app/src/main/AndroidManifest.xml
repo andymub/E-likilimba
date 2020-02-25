@@ -14,9 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TransfertActivity"
-            android:theme="@style/Theme.Design.NoActionBar"
-            ></activity>
+        <activity android:name=".retraitActivity"></activity>
+        <activity
+            android:name=".TransfertActivity"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".BoardActivity"
             android:theme="@style/Theme.Design.NoActionBar" />

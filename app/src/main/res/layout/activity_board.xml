@@ -4,20 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior = "@string/appbar_scrolling_view_behavior"
-    tools:showIn = "@layout/activity_board"
+    android:background="@drawable/surface_gray_dark_light_shadow_18440_800x1200"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".BoardActivity">
-<!--    <androidx.support.v7.widget.RecyclerView-->
+    <!--    <androidx.support.v7.widget.RecyclerView-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id = "@+id/recycler_view"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:scrollbars = "horizontal" />
-    <FrameLayout
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/txtDefillante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_view"
+        android:background="@color/design_default_color_on_secondary"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Single-line text view that scrolls automatically if the text is too long to fit in the widget"
+        android:textColor="#FFFF00"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <include
+        layout="@layout/items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDefillante">
+
+    </include>
+
+    <FrameLayout
         android:id="@+id/container"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <!-- Main content -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"

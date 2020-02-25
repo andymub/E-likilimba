@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".retraitActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mes items"
+                android:textColor="@color/card_text_color" />
+
+            <HorizontalScrollView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+
+                            android:layout_height="245.9dp"
+                            android:layout_marginStart="15.4dp"
+                            android:layout_marginLeft="15.4dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:layout_marginBottom="20dp"
+                            android:elevation="0dp"
+                            app:cardCornerRadius="9dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/design_default_color_background"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15.4dp"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:lineSpacingExtra="2.8sp"
+                                    android:text="Caisse solidarité -LIKILEMBA"
+                                    android:textColor="#131314"
+                                    android:textSize="16.2sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:layout_marginRight="15.4dp"
+                                    android:lineSpacingExtra="2.6sp"
+                                    android:text="Créer votre groupe \n Inviter les amis \n Gérer vos cotisation"
+                                    android:textColor="#8f8f8f"
+                                    android:textSize="13.4sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15.4dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/caisse_social_e_likilimba_rdc" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+
+                            android:layout_height="245.9dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginEnd="16.8dp"
+                            android:layout_marginRight="16.8dp"
+
+                            android:layout_marginBottom="20dp"
+                            android:elevation="0dp"
+                            app:cardCornerRadius="9dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/design_default_color_background"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15.4dp"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:lineSpacingExtra="2.8sp"
+                                    android:text="Caisse Financement participatif"
+                                    android:textColor="#131314"
+                                    android:textSize="16.2sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:layout_marginRight="15.4dp"
+                                    android:lineSpacingExtra="2.6sp"
+                                    android:text="Créer un projet \n Participer essemble \n à la récolter des fonds "
+                                    android:textColor="#8f8f8f"
+                                    android:textSize="13.4sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15.4dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/crowdfunding_e_likilimba" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+
+                            android:layout_height="245.9dp"
+                            android:layout_marginStart="15.4dp"
+                            android:layout_marginLeft="15.4dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+
+                            android:layout_marginBottom="60dp"
+                            android:elevation="0dp"
+                            app:cardCornerRadius="9dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/design_default_color_background"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15.4dp"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:lineSpacingExtra="2.8sp"
+                                    android:text="Epargne perso "
+                                    android:textColor="#131314"
+                                    android:textSize="16.2sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:layout_marginRight="15.4dp"
+                                    android:lineSpacingExtra="2.6sp"
+                                    android:text="Mes épites épargnes \n pour un projet à \n court terme"
+                                    android:textColor="#8f8f8f"
+                                    android:textSize="13.4sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15.4dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/epargne_e_likilimba" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="180dp"
+
+                            android:layout_height="245.9dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginEnd="16.8dp"
+                            android:layout_marginRight="16.8dp"
+
+                            android:layout_marginBottom="60dp"
+                            android:elevation="0dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="9dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/design_default_color_background"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15.4dp"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:lineSpacingExtra="2.8sp"
+                                    android:text="Prêt et Emprunt"
+                                    android:textColor="#131314"
+                                    android:textSize="16.2sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="15.4dp"
+                                    android:layout_marginTop="15.4dp"
+                                    android:layout_marginRight="15.4dp"
+                                    android:lineSpacingExtra="2.6sp"
+                                    android:text="Faites un pret \n ou un emprunt \n nous faisons le suivi"
+                                    android:textColor="#8f8f8f"
+                                    android:textSize="13.4sp" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="15.4dp"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/pret_emprunt_e_likilimba" />
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

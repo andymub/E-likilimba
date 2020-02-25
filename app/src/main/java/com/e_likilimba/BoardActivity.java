@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.e_likilimba.Adapter.CardAdapter;
 import com.e_likilimba.Objet.CardData;
@@ -25,6 +26,7 @@ public class BoardActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CardAdapter cardAdapter;
     private List cardDataList = new ArrayList<>();
+    private TextView txtScrowllMessage;
     BottomNavigationView bottomNavigation;
 
     @TargetApi(Build.VERSION_CODES.O)
@@ -33,6 +35,7 @@ public class BoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
         bottomNavigation=findViewById(R.id.bottom_navigation);
+        findViewById(R.id.txtDefillante).setSelected(true);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         recyclerView = findViewById(R.id.recycler_view);
         cardAdapter = new CardAdapter(cardDataList,BoardActivity.this);
@@ -40,6 +43,7 @@ public class BoardActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(cardAdapter);
         cardDataPrepare();
+
     }
 
     private void cardDataPrepare() {
