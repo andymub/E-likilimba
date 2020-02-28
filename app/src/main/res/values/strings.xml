@@ -15,4 +15,11 @@
     <string name="card_number">Card Number</string>
     <string name="card_validity">Expires</string>
     <string name="card_cvv">CVV/CVC Number</string>
+
+    <string-array name="source_de_retrait">
+        <item>Airtel-Money</item>
+        <item>Orange Money</item>
+        <item>M-Pesa</item>
+        <item>Dépôt dans une banque</item>
+    </string-array>
 </resources>

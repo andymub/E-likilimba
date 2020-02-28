@@ -65,13 +65,17 @@ public class BoardActivity extends AppCompatActivity {
                             startActivity(intentTranfert);
                             return true;
                         case R.id.navigation_retrait:
+                            Intent intentRetrait =new Intent(BoardActivity.this, RetraitActivity.class);
+                            startActivity(intentRetrait);
 
                             return true;
                         case R.id.navigation_depot:
-
+                            Intent intentDepot =new Intent(BoardActivity.this, DepotActivity.class);
+                            startActivity(intentDepot);
                             return true;
                         case R.id.navigation_notifications:
-
+                            Intent intentNotification =new Intent(BoardActivity.this, NotificationUserActivity.class);
+                            startActivity(intentNotification);
                             return true;
 
                     }

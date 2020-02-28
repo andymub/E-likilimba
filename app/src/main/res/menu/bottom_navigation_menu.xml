@@ -10,7 +10,7 @@
         android:title="Dépot" />
     <item
         android:id="@+id/navigation_transfert"
-        android:icon="@drawable/ic_action_tarnsfert"
+        android:icon="@drawable/ic_action_transfert"
         android:title="Transfert" />
     <item
         android:id="@+id/navigation_notifications"
