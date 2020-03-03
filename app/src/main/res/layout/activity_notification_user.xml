@@ -4,12 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_notif"
+    android:background="@drawable/surface_gray_dark_light_shadow_18440_800x1200"
     tools:context=".NotificationUserActivity">
 
-    <ListView
-        android:id="@+id/listNotification"
+    <View
+        android:id="@+id/viewLine8"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@+id/linearTransfOne"
+        android:layout_alignBottom="@id/linearTransfOneNotif"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/linearTransfOneNotif"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center|clip_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtNomDuGroupe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Notification"
+            android:textColor="#FCFFFFFF"
+            android:textSize="@dimen/header_text" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="134dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/ic_action_notification"
+            tools:ignore="VectorDrawableCompat" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewLine8" />
 
 </RelativeLayout>

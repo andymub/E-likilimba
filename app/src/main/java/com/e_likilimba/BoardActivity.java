@@ -2,6 +2,7 @@ package com.e_likilimba;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,6 +11,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.e_likilimba.Adapter.CardAdapter;
@@ -28,6 +30,7 @@ public class BoardActivity extends AppCompatActivity {
     private List cardDataList = new ArrayList<>();
     private TextView txtScrowllMessage;
     BottomNavigationView bottomNavigation;
+    private CardView cardCaisseSoc, cardCrowFound,cardEpargne, cardPretEtEmprunt;
 
     @TargetApi(Build.VERSION_CODES.O)
     @Override
@@ -38,11 +41,24 @@ public class BoardActivity extends AppCompatActivity {
         findViewById(R.id.txtDefillante).setSelected(true);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         recyclerView = findViewById(R.id.recycler_view);
+        cardCaisseSoc=findViewById(R.id.cardViewCs);
+        cardCrowFound=findViewById(R.id.cardViewCf);
+        cardEpargne=findViewById(R.id.cardViewEp);
+        cardPretEtEmprunt=findViewById(R.id.cardViewEp);
         cardAdapter = new CardAdapter(cardDataList,BoardActivity.this);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(cardAdapter);
         cardDataPrepare();
+
+
+        cardCaisseSoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCaisseSolidaire =new Intent(BoardActivity.this, CaisseSocialActivity.class);
+                startActivity(intentCaisseSolidaire);
+            }
+        });
 
     }
 

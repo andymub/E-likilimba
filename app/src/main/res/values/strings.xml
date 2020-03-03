@@ -22,4 +22,5 @@
         <item>M-Pesa</item>
         <item>Dépôt dans une banque</item>
     </string-array>
+    <string name="title_activity_caisse_social">CaisseSocialActivity</string>
 </resources>

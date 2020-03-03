@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -11,46 +12,85 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.e_likilimba.Adapter.NotifivationListAdapter;
+import com.e_likilimba.Objet.NotificationUserObject;
 
-public class NotificationUserActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class NotificationUserActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
     private ListView listView;
     private String titreNotif[] = {
-            "India",
-            "China",
-            "Nepal",
-            "Bhutan"
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date...",
+            "Titre / date..."
     };
 
     private String messageNotif[] = {
-            "Delhi",
-            "Beijing",
-            "Kathmandu",
-            "Thimphu"
+            "Message .........",
+            "Message .........",
+            "Message .........",
+            "Message .........","Message .........",
+            "Message .........",
+            "Message .........",
+            "Message .........","Message .........",
+            "Message .........",
+            "Message .........",
+            "Message .........",
     };
 
 
     private String typeNotif[] = {
-            "Message",
-            "Invitation",
-            "Dépôt",
-            "retrait"
+            "message",
+            "invitation",
+            "dépôt",
+            "retrait", "message",
+            "invitation",
+            "dépôt",
+            "retrait", "message",
+            "invitation",
+            "dépôt",
+            "retrait",
 
     };
 
+    List<NotificationUserObject> rowNotifItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_user);
-        ListView listView=findViewById(R.id.listNotification);
+        rowNotifItems = new ArrayList<NotificationUserObject>();
+        for (int i = 0; i < titreNotif.length; i++) {
+            NotificationUserObject item = new NotificationUserObject(titreNotif[i],messageNotif[i],typeNotif[i]);
+            rowNotifItems.add(item);
+        }
 
-        // For populating list data
-        NotifivationListAdapter customCountryList = new NotifivationListAdapter(this, titreNotif, messageNotif, typeNotif);
-        listView.setAdapter(customCountryList);
+        listView = (ListView) findViewById(R.id.list);
+        NotifivationListAdapter adapter = new NotifivationListAdapter(this, rowNotifItems);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
+    }
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getApplicationContext(),"You Selected "+titreNotif[position-1]+ " as Message ",Toast.LENGTH_SHORT).show();        }
-        });
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position,
+                            long id) {
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Item " + (position + 1) + ": " + rowNotifItems.get(position),
+                Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+        toast.show();
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

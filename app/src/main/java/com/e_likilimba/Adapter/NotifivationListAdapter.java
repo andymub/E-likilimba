@@ -1,57 +1,86 @@
 package com.e_likilimba.Adapter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.e_likilimba.Objet.NotificationUserObject;
 import com.e_likilimba.R;
 
-public class NotifivationListAdapter extends ArrayAdapter {
-    private String[] titreDeNotification;
-    private String[] messageNotification;
-    private String[] typeNotification;
-    private Activity context;
+import java.util.List;
 
-    public NotifivationListAdapter(Activity context, String[] titreDeNotification, String[] messageNotification, String[] typeNotification) {
-        super(context, R.layout.row_item);
+public class NotifivationListAdapter extends BaseAdapter {
+    Context context;
+    List<NotificationUserObject> rowNotifItems;
+
+    public NotifivationListAdapter(Context context, List<NotificationUserObject> items) {
         this.context = context;
-        this.titreDeNotification = titreDeNotification;
-        this.messageNotification = messageNotification;
-        this.typeNotification = typeNotification;
+        this.rowNotifItems = items;
+    }
 
+    /*private view holder class*/
+    private class ViewHolder {
+        ImageView imageView;
+        TextView txtTitle;
+        TextView txtDescMessage;
+    }
+
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder = null;
+
+        LayoutInflater mInflater = (LayoutInflater)
+                context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+        if (convertView == null) {
+            convertView = mInflater.inflate(R.layout.list_notif_item, null);
+            holder = new ViewHolder();
+            holder.txtDescMessage = convertView.findViewById(R.id.desc);
+            holder.txtTitle = convertView.findViewById(R.id.title);
+            holder.imageView = convertView.findViewById(R.id.icon);
+            convertView.setTag(holder);
+        }
+        else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+
+        NotificationUserObject rowNotifItem = (NotificationUserObject) getItem(position);
+
+        holder.txtDescMessage.setText(rowNotifItem.getMessageNotification());
+        holder.txtTitle.setText(rowNotifItem.getTitreDeNotification());
+        if (rowNotifItem.getTypeNotification().trim().toLowerCase()=="message")
+        {
+            holder.imageView.setImageResource(R.drawable.ic_mail_outline_black_24dp);
+        }
+        else if (rowNotifItem.getTypeNotification().trim().toLowerCase()=="dépôt"){
+            holder.imageView.setImageResource(R.drawable.ic_action_name);
+        }
+        else if (rowNotifItem.getTypeNotification().trim().toLowerCase()=="retrait"){
+            holder.imageView.setImageResource(R.drawable.ic_action_transfert);
+        }
+        else if (rowNotifItem.getTypeNotification().trim().toLowerCase()=="invitation"){
+            holder.imageView.setImageResource(R.drawable.ic_group_invitation_24dp);
+        }
+
+
+        return convertView;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View row=convertView;
-        LayoutInflater inflater = context.getLayoutInflater();
-        if(convertView==null)
-            row = inflater.inflate(R.layout.row_item, null, true);
-        TextView txtTitreNotification = row.findViewById(R.id.txtNotifiactionTitle);
-        TextView txtMessageNotification = row.findViewById(R.id.txtNotificationMessage);
-        ImageView imageFlag = row.findViewById(R.id.imageViewFlag);
+    public int getCount() {
+        return rowNotifItems.size();
+    }
 
-        txtTitreNotification.setText(titreDeNotification[position]);
-        txtMessageNotification.setText(messageNotification[position]);
-        String typ=typeNotification[position];
-        if (typeNotification[position].toLowerCase()=="message")
-        {
-        imageFlag.setImageResource(R.drawable.ic_mail_outline_black_24dp);
-        }
-        else if (typeNotification[position].toLowerCase()=="dépôt"){
-            imageFlag.setImageResource(R.drawable.ic_action_name);
-        }
-        else if (typeNotification[position].toLowerCase()=="retrait"){
-            imageFlag.setImageResource(R.drawable.ic_action_transfert);
-        }
-        else if (typeNotification[position].toLowerCase()=="invitation"){
-            imageFlag.setImageResource(R.drawable.ic_group_invitation_24dp);
-        }
+    @Override
+    public Object getItem(int position) {
+        return rowNotifItems.get(position);
+    }
 
-        return  row;
+    @Override
+    public long getItemId(int position) {
+        return rowNotifItems.indexOf(getItem(position));
     }
 }
