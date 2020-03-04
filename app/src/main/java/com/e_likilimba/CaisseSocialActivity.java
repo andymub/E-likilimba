@@ -2,7 +2,6 @@ package com.e_likilimba;
 
 import android.os.Bundle;
 
-import com.e_likilimba.Adapter.CiasseSocRecyclerViewAdapter;
 import com.e_likilimba.Adapter.CsAdapter;
 import com.e_likilimba.Objet.CaisseSolidaireObjet;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -72,9 +71,20 @@ public class CaisseSocialActivity extends AppCompatActivity {
 
                 CaisseSolidaireObjet dataModel= dataModelsCs.get(position);
 
-                Snackbar.make(view, dataModel.getNombreParticipantCaisseSolidaire()+"\n"+dataModel.getTyperDevise(), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                Toast.makeText(CaisseSocialActivity.this,"suis là",Toast.LENGTH_LONG).show();
+                if(position == 0) {
+                    //code specific to first list item
+                    Toast.makeText(getApplicationContext(),"Place Your First Option Code",Toast.LENGTH_SHORT).show();
+                }
+
+                else if(position == 1) {
+                    //code specific to 2nd list item
+                    Toast.makeText(getApplicationContext(),"Place Your Second Option Code",Toast.LENGTH_SHORT).show();
+                }
+
+                else if(position == 2) {
+
+                    Toast.makeText(getApplicationContext(),"Place Your Third Option Code",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

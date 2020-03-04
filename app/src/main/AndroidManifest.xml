@@ -17,7 +17,7 @@
         <activity
             android:name=".CaisseSocialActivity"
             android:label="@string/title_activity_caisse_social"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity
             android:name=".NotificationUserActivity"
             android:theme="@style/Theme.Design.NoActionBar" />

@@ -6,10 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".CaisseSocialActivity">
 
-    <include
-        layout="@layout/content_caisse_social"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeCs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewCS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/caisse_social_e_likilimba_rdc" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignLeft="@+id/imageViewCS"
+                android:layout_alignTop="@+id/imageViewCS"
+                android:layout_alignRight="@+id/imageViewCS"
+                android:layout_alignBottom="@+id/imageViewCS"
+                android:gravity="center"
+                android:shadowColor="@color/color_button_default"
+                android:text="Caisse soidaire"
+                android:textColor="@color/CTA_text"
+                android:textColorHighlight="@color/design_default_color_error"
+                android:textColorHint="@color/color_button_default"
+                android:textSize="36sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            layout="@layout/content_caisse_social"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -17,6 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:backgroundTint="@color/card_cvv_color"
+        app:srcCompat="@drawable/ic_library_add_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

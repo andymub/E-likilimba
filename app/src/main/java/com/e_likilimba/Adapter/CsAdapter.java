@@ -21,7 +21,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet>  {
+public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet> implements View.OnClickListener {
 
     private ArrayList<CaisseSolidaireObjet> dataSetCs;
 
@@ -33,22 +33,26 @@ public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet>  {
         this.mContextCs=context;
     }
 
-//    @Override
-//    public void onClick(View view) {
-//        int position=(Integer) view.getTag();
-//        Object object= getItem(position);
-//        CaisseSolidaireObjet dataModel=(CaisseSolidaireObjet)object;
-//
-//        switch (view.getId())
-//        {
-//            case R.id.txtNomDuGroupeCs:
-//                Snackbar.make(view, "Release date " +dataModel.getNomDeCaisseSolidaire(), Snackbar.LENGTH_LONG)
-//                        .setAction("No action", null).show();
-//                break;
-//
-//        }
-//
-//    }
+    @Override
+    public void onClick(View view) {
+        int position=(Integer) view.getTag();
+        Object object= getItem(position);
+        CaisseSolidaireObjet dataModel=(CaisseSolidaireObjet)object;
+
+        switch (view.getId())
+        {
+            case R.id.txtNomDuGroupeCs:
+                Snackbar.make(view, "Release date " +dataModel.getNomDeCaisseSolidaire(), Snackbar.LENGTH_LONG)
+                        .setAction("No action", null).show();
+                break;
+            case R.id.card_view_cs:
+                Snackbar.make(view, "Release date " +dataModel.getNomDeCaisseSolidaire(), Snackbar.LENGTH_LONG)
+                        .setAction("No action", null).show();
+                break;
+
+        }
+
+    }
 
     // View lookup cache
     private static class ViewHolder {
@@ -105,8 +109,11 @@ public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet>  {
         viewHolder.situatioActuelle.setText(dataModel.getSituatioActuelle());
         viewHolder.dureeAvantRetrait.setText(dataModel.getDureeAvantRetrait());
         //viewHolder.nomDeCaisseSolidaire.setOnClickListener(this);
-       // viewHolder.card_view_cs.setOnClickListener(this);
+        viewHolder.card_view_cs.setOnClickListener(this);
+        viewHolder.card_view_cs.setTag(position);;
 
+//        viewHolder.nomDeCaisseSolidaire.setOnClickListener(this);
+//        viewHolder.nomDeCaisseSolidaire.setTag(position);
 //        viewHolder.dateDeDebut.setTag(position)
         viewHolder.dateDeDebut.setText(dataModel.getDateDeDebut());
         viewHolder.prixDuCompte.setText(dataModel.getPrixDuCompte());
