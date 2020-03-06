@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Caiss_Finacement_participatif_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeCe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewCs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/crowdfunding_e_likilimba" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignLeft="@+id/imageViewCf"
+                android:layout_alignTop="@+id/imageViewCf"
+                android:layout_alignRight="@+id/imageViewCf"
+                android:layout_alignBottom="@+id/imageViewCf"
+                android:gravity="center"
+                android:text="Caisse Finacement Participatif"
+                android:textColor="@color/CTA_text"
+                android:textColorHighlight="@color/design_default_color_error"
+                android:textColorHint="@color/color_button_default"
+                android:textSize="36sp"
+                android:shadowColor="#090909"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1"/>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/content_caiss__finacement_participatif_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

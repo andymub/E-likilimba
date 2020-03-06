@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_pret">
+
+    <fragment
+        android:id="@+id/navigation_pret"
+        android:name="com.e_likilimba.ui.pret.PretFragment"
+        android:label="@string/title_pret"
+        tools:layout="@layout/fragment_pret" />
+
+    <fragment
+        android:id="@+id/navigation_emprunt"
+        android:name="com.e_likilimba.ui.emprunt.EmpruntFragment"
+        android:label="@string/title_emprunt"
+        tools:layout="@layout/fragment_emprunt" />
+
+</navigation>
