@@ -15,9 +15,21 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".PreEtEmpruntActivity"
+            android:label="@string/title_activity_pre_et_emprunt_activity"
+            android:theme="@style/Theme.Design.Light"></activity>
+        <activity
+            android:name=".Epargne_perso_Activity"
+            android:label="@string/title_activity_epargne_perso_"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".Caiss_Finacement_participatif_Activity"
+            android:label="@string/title_activity_caiss__finacement_participatif_"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
             android:name=".CaisseSocialActivity"
             android:label="@string/title_activity_caisse_social"
-            android:theme="@style/Theme.Design.NoActionBar"></activity>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".NotificationUserActivity"
             android:theme="@style/Theme.Design.NoActionBar" />

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".CaisseSocialActivity">
 
     <LinearLayout
@@ -33,32 +34,23 @@
                 android:layout_alignRight="@+id/imageViewCS"
                 android:layout_alignBottom="@+id/imageViewCS"
                 android:gravity="center"
-                android:shadowColor="@color/color_button_default"
+
                 android:text="Caisse soidaire"
                 android:textColor="@color/CTA_text"
-                android:textColorHighlight="@color/design_default_color_error"
-                android:textColorHint="@color/color_button_default"
-                android:textSize="36sp" />
+                android:textSize="36sp"
+                android:shadowColor="#090909"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1"
+                />
 
         </RelativeLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="NotSibling">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            </LinearLayout>
-        </ScrollView>
 
         <include
             layout="@layout/content_caisse_social"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@drawable/indicator_selected" />
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

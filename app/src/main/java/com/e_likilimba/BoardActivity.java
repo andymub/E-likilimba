@@ -44,7 +44,7 @@ public class BoardActivity extends AppCompatActivity {
         cardCaisseSoc=findViewById(R.id.cardViewCs);
         cardCrowFound=findViewById(R.id.cardViewCf);
         cardEpargne=findViewById(R.id.cardViewEp);
-        cardPretEtEmprunt=findViewById(R.id.cardViewEp);
+        cardPretEtEmprunt=findViewById(R.id.cardViewPeE);
         cardAdapter = new CardAdapter(cardDataList,BoardActivity.this);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(manager);
@@ -57,6 +57,27 @@ public class BoardActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentCaisseSolidaire =new Intent(BoardActivity.this, CaisseSocialActivity.class);
                 startActivity(intentCaisseSolidaire);
+            }
+        });
+        cardCrowFound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCardCrowFound =new Intent(BoardActivity.this, Caiss_Finacement_participatif_Activity.class);
+                startActivity(intentCardCrowFound);
+            }
+        });
+        cardEpargne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCardEpargne =new Intent(BoardActivity.this, Epargne_perso_Activity.class);
+                startActivity(intentCardEpargne);
+            }
+        });
+        cardPretEtEmprunt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCardPretEtEmprunt =new Intent(BoardActivity.this, PreEtEmpruntActivity.class);
+                startActivity(intentCardPretEtEmprunt);
             }
         });
 
