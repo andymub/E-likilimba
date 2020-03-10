@@ -34,6 +34,7 @@ android:layout_gravity="center">
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/txtLogin"
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
@@ -42,9 +43,11 @@ android:layout_gravity="center">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_register_hero"
+                    android:layout_alignRight="@id/txtLogin"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="-11dp"
+                    app:srcCompat="@drawable/ic_register_hero" />
             </RelativeLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -143,11 +146,11 @@ android:layout_gravity="center">
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_facebook"/>
+                    app:srcCompat="@drawable/ic_facebook"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_google_plus"
+                    app:srcCompat="@drawable/ic_google_plus"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>
 
@@ -166,7 +169,7 @@ android:layout_gravity="center">
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add_img"
+        app:srcCompat="@drawable/ic_add_img"
         android:layout_marginRight="11dp"
         android:layout_marginBottom="30dp"
         android:onClick="onLoginClick"/>

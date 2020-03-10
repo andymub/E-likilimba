@@ -59,7 +59,7 @@ public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet> implements Vi
         TextView nomDeCaisseSolidaire, nombreParticipantCaisseSolidaire,
                 typerDevise,prixDuCompte,dureeAvantRetrait,
                 dateDeDebut, situatioActuelle;
-        ImageButton deleteGroupeCs, addToGroupeCs;
+        ImageButton depotFondCs,deleteGroupeCs, addToGroupeCs;
         CardView card_view_cs;
     }
 
@@ -87,6 +87,7 @@ public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet> implements Vi
             viewHolder.dateDeDebut = (TextView) convertView.findViewById(R.id.txtDébutCs3);
             viewHolder.deleteGroupeCs = convertView.findViewById(R.id.imgBtnSupprimerCs);
             viewHolder.addToGroupeCs = convertView.findViewById(R.id.imgeBtnAddAccountCS);
+            viewHolder.depotFondCs = convertView.findViewById(R.id.imgBtnDépotCs);
             viewHolder.card_view_cs = convertView.findViewById(R.id.card_view_cs);
 
 
@@ -118,6 +119,7 @@ public class CsAdapter  extends ArrayAdapter<CaisseSolidaireObjet> implements Vi
         viewHolder.dateDeDebut.setText(dataModel.getDateDeDebut());
         viewHolder.prixDuCompte.setText(dataModel.getPrixDuCompte());
         viewHolder.deleteGroupeCs.setImageResource(R.drawable.ic_delete_black_24dp);
+        viewHolder.depotFondCs.setImageResource(R.drawable.ic_action_depot);
         viewHolder.addToGroupeCs.setImageResource(R.drawable.ic_group_add_black_24dp);
 
         return convertView;
