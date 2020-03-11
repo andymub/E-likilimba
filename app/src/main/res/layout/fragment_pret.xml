@@ -50,7 +50,7 @@
         </RelativeLayout>
 
         <include
-            layout="@layout/content_epargne_perso_"
+            layout="@layout/activity_contant_pret_emprunt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
